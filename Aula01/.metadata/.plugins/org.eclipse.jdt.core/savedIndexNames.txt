@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\Daniel\Desktop\GamaComplementar\Aula01\.metadata\.plugins\org.eclipse.jdt.core
+2806059066.index
+1865797976.index
+3918814802.index
+1229541045.index
+1185832544.index
+1826897575.index

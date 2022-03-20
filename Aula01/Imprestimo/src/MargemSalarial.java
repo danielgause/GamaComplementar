@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class MargemSalarial {
+public static void main(String[] args) {
+	Scanner teclado = new Scanner(System.in);
+	Double salario, prestacao, margem;
+	System.out.println("Digite seu salário: ");
+	salario = teclado.nextDouble();
+	System.out.println("Digite a prestação desejada: ");
+	prestacao = teclado.nextDouble();
+margem = salario*30/100;
+if (prestacao <= margem) {
+System.out.println("Seu impréstimo foi aprovado!");
+}
+else {
+	System.out.println("Infelizmente seu impréstimo foi negado.");
+}
+}
+}
