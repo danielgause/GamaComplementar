@@ -6,9 +6,13 @@ public class ContaCorrente extends Conta {
 		super(numeroConta, saldo);
 	}
 
-public boolean sacar(double valor) {
-return super.sacar(valor);
-}
+	@Override
+	public boolean sacar(double valor) {
+		if (valor <= super.getSaldo()) {
+			return super.sacar(valor);
+		} else {
+			return false;
+		}
+	}
 
 }
-

@@ -1,4 +1,4 @@
-package Controler;
+package controler;
 
 import java.util.ArrayList;
 
@@ -31,6 +31,24 @@ public class GerenciaContas {
 			}
 		}
 		return -1;
+	}
+
+	public boolean sacar(int numeroConta, double valor) {
+		for (int i = 0; i < contas.size(); i++) {
+			if (contas.get(i).getNumeroConta() == numeroConta) {
+				return contas.get(i).sacar(valor);
+			}
+		}
+		return false;
+	}
+
+	public boolean depositar(int numeroConta, double valor) {
+		for (int i = 0; i < contas.size(); i++) {
+			if (contas.get(i).getNumeroConta() == numeroConta) {
+				return contas.get(i).depositar(valor);
+			}
+		}
+		return false;
 	}
 
 	public boolean remover(int numeroConta) {

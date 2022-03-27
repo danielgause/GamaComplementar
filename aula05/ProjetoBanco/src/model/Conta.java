@@ -27,8 +27,12 @@ public abstract class Conta {
 	}
 
 	public boolean depositar(double valor) {
-		this.saldo += valor;
-		return true;
+		if (valor > 0) {
+			this.saldo += valor;
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override

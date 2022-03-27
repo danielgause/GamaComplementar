@@ -1,30 +1,25 @@
 package model;
 
 public class ContaEspecial extends Conta {
-	private String tipoConta;
 	private double limite;
-	public ContaEspecial(int numeroConta, double saldo, String tipoConta, double limite) {
+
+	public ContaEspecial(int numeroConta, double saldo, double limite) {
 		super(numeroConta, saldo);
-		this.tipoConta = tipoConta;
 		this.limite = limite;
 	}
 
+	@Override
 	public boolean sacar(double valor) {
-		if (limite + super.getSaldo() > valor) {
-			return false;
+		if (limite + super.getSaldo() >= valor) {
+			return super.sacar(valor);
 		} else {
-			super.sacar(valor);
-			return true;
+			return false;
 		}
 	}
 
 	@Override
 	public String toString() {
-		return tipoConta + " - " + super.toString() + " - " + limite;
-	}
-
-	public String getTipoConta() {
-		return tipoConta;
+		return super.toString() + " - " + limite;
 	}
 
 	public double getLimite() {
